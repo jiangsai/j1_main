@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote  name="origin"
-        fetch="https://github.com/jiangsai/j1_main"
-        revision="master" />
-    <remote  name="github"
-        fetch="https://github.com"
-        revision="master"
-        review="" />
-    <default remote="origin"
-        revision="master"
-        sync-j="4" />
-
-   <!-- <project name="alibaba/git-repo-go" path="git-repo" groups="app">
-        <linkfile src="README.md" dest="README.md"></linkfile>
-    </project>-->
-   <!-- <project name="alibaba/git-repo-go-doc" path="website" groups="app"/>-->
-    <project name="jiangsai/j1_test" path="lib/j1_test" groups="lib" remote="github" />
+    <remote name="origin" fetch="https://github.com/" review="https://github.com/" />
+    <default remote="origin" revision="master" sync-j="4" />
+    <project name="jiangsai/j1_test.git" path="lib/j1_test" />
 </manifest>
