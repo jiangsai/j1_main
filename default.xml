@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote  name="origin"
-        fetch=".."
+        fetch="https://github.com/jiangsai/j1_main"
         revision="master" />
     <remote  name="github"
         fetch="https://github.com"
