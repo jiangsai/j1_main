@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-    <remote name="origin" fetch="https://github.com/" review="https://github.com/" />
-    <default remote="origin" revision="master" sync-j="4" />
-    <project name="jiangsai/j1_test.git" path="lib/j1_test" />
-    <project name="jiangsai/test111.git" path="lib/j1_test2" />
-</manifest>
