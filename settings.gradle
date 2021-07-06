@@ -1,2 +1,3 @@
 rootProject.name = "Main"
 include ':app'
+include ':modules:j1_modules_commonview:mylibrary'
