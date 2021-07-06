@@ -32,6 +32,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //test
-   // include ':mylibrary'
-    implementation project(':modules:j1_modules_commonview:mylibrary')
+    implementation project(':modules:j1_modules_commonview:architecture_view')
+
 }
