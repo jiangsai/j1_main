@@ -1,3 +1,8 @@
 rootProject.name = "Main"
 include ':app'
 include ':modules:j1_modules_commonview:architecture_view'
+
+
+
+//激活子app
+include ':modules:j1_modules_commonview:app'
