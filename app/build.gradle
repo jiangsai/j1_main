@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -36,5 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //test
     implementation project(':modules:j1_modules_commonview:architecture_view')
+
+    implementation project(':base_modules:j1_basemodules')
 
 }
