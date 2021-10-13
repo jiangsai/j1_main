@@ -24,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".process.MyService"
+            android:process="com.playplan.boot.process"></service>
     </application>
 
 </manifest>
