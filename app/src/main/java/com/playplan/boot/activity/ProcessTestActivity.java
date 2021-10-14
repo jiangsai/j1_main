@@ -1,4 +1,4 @@
-package com.playplan.boot;
+package com.playplan.boot.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,10 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.playplan.boot.Jump.TwoActivity;
 import com.playplan.boot.databinding.ActivityMainBinding;
 
 
-public class MainActivity extends AppCompatActivity {
+public class ProcessTestActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     @Override

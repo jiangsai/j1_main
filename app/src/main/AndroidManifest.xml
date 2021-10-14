@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
-            android:name=".Jump.TwoActivity"
+            android:name=".activity.TwoActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ProcessTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

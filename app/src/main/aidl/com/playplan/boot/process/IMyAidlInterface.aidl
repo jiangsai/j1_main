@@ -1,6 +1,8 @@
 // IMyAidlInterface.aidl
 package com.playplan.boot.process;
 
+import com.playplan.boot.process.IMyCallBack;
+import com.playplan.boot.process.MyData;
 // Declare any non-default types here with import statements
 
 /**
@@ -15,5 +17,8 @@ interface IMyAidlInterface {
             double aDouble, String aString);
 
     String getString();
-    void setData();
+   // void setData();
+    void setListener(IMyCallBack callback);
+
+    void setData(in MyData data);
 }
