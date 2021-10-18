@@ -8,3 +8,13 @@ include ':modules:j1_modules_commonview:architecture_view'
 include ':modules:j1_modules_commonview:app'
 include ':base_modules:j1_basemodules'
 include ':modules:j1_modules_quick_startup'
+
+
+//test模块
+include ':modules:j1_modules_quick_startup:testa'
+include ':modules:j1_modules_quick_startup:testb'
+
+include ':modules:j1_modules_quick_startup:basemodules'
+include ':modules:j1_modules_quick_startup:fastmodules'
+include ':modules:j1_modules_quick_startup:FastModulesAnnotationProcessor'
+include ':modules:j1_modules_quick_startup:buildsrc'
