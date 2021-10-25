@@ -1,8 +1,11 @@
 package com.playplan.boot;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.hjq.toast.ToastUtils;
+import com.playplan.fastmodules.module.IFastModule;
+import com.playplan.fastmodules.module.ModuleLoader;
 
 
 /**
@@ -10,10 +13,16 @@ import com.hjq.toast.ToastUtils;
  * time   : 2021/10/13
  * desc   :
  */
-public class App extends Application {
+public class App extends Application implements IFastModule {
     @Override
     public void onCreate() {
         super.onCreate();
         ToastUtils.init(this);
+        ModuleLoader.initMoudle(SystemUtil.getCurProcessName(), SystemUtil.isProcess(BuildConfig.APPLICATION_ID));
+    }
+
+    @Override
+    public void intitFastNodeList() {
+        Log.e("jyt", "test === initFastNodeList");
     }
 }

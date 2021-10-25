@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'fastmoudle'
 }
 
 android {
@@ -42,4 +43,10 @@ dependencies {
 
     implementation project(':base_modules:j1_basemodules')
 
+    implementation 'com.github.jiangsai:j1_modules_fastmodules:1.0.0'
+
+}
+
+fastmoduleconf{
+    fastModules=["com/playplan/boot/App",]
 }
