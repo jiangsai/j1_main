@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ff00ff"
+    android:layout_width="150dp"
+    android:layout_height="180dp">
+
+    <com.playplan.boot.surface.CameraSurfaceView
+        android:id="@+id/mpSurfaceView"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/tvPlay"
+        android:text="click"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>
