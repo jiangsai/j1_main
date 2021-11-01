@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
@@ -53,12 +54,16 @@ public class MediaPlayerSurfaceView extends SurfaceView implements SurfaceHolder
                 if (!mediaPlayer.isPlaying()) {
                     setDataPath("https://media.w3.org/2010/05/sintel/trailer.mp4");
                 } else {
+                    setVisibility(GONE);
+                    ViewGroup pareView = (ViewGroup) getParent();
+                    pareView.removeView(MediaPlayerSurfaceView.this);
                     if (!s) {
                         s = true;
-                        //   mHolder.setKeepScreenOn(true);
+                        // mHolder.setKeepScreenOn(true);
                         mHolder.setFormat(PixelFormat.TRANSPARENT);
                         setZOrderOnTop(true);
                         setZOrderMediaOverlay(true);
+
                     } else {
                         s = false;
                         //   mHolder.setKeepScreenOn(false);
@@ -66,7 +71,9 @@ public class MediaPlayerSurfaceView extends SurfaceView implements SurfaceHolder
                         setZOrderOnTop(false);
                         setZOrderMediaOverlay(false);
                     }
-
+                    pareView.addView(MediaPlayerSurfaceView.this);
+                    setVisibility(VISIBLE);
+                    Log.e("jyt-MediaPlayer", "====" + s);
                 }
 
             }

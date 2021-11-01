@@ -5,12 +5,15 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:name=".App"
@@ -21,9 +24,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
+            android:name=".activity.GlSurfaceViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MyDialogActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".activity.ProcessTestActivity"
             android:exported="true" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.SurfaceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +42,7 @@
 
         <service
             android:name=".process.MyService"
-            android:process="com.playplan.boot.process"></service>
+            android:process="com.playplan.boot.process" />
     </application>
 
 </manifest>

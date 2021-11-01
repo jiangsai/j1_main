@@ -19,7 +19,7 @@ import com.playplan.boot.surface.bean.Test;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class SurfaceActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     @Override
@@ -75,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
                     binding.fl2.addView(view1);
                 }
                 Log.e("jyt", binding.fl3.getChildCount() + "==" + binding.fl2.getChildCount());
+            }
+        });
+        binding.iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SurfaceActivity.this, GlSurfaceViewActivity.class));
             }
         });
 

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
@@ -42,6 +43,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         initView();
     }
 
+    boolean s = false;
     private void initView() {
         mHolder = getHolder();
         mHolder.addCallback(this);
@@ -52,10 +54,26 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mHolder.setKeepScreenOn(true);
-                mHolder.setFormat(PixelFormat.TRANSPARENT);
-                setZOrderOnTop(true);
-                setZOrderMediaOverlay(true);
+                setVisibility(GONE);
+                ViewGroup pareView = (ViewGroup) getParent();
+                pareView.removeView(CameraSurfaceView.this);
+                if (!s) {
+                    s = true;
+                    // mHolder.setKeepScreenOn(true);
+                    mHolder.setFormat(PixelFormat.TRANSPARENT);
+                    setZOrderOnTop(true);
+                    setZOrderMediaOverlay(true);
+
+                } else {
+                    s = false;
+                    //   mHolder.setKeepScreenOn(false);
+                    mHolder.setFormat(PixelFormat.TRANSPARENT);
+                    setZOrderOnTop(false);
+                    setZOrderMediaOverlay(false);
+                }
+                pareView.addView(CameraSurfaceView.this);
+                setVisibility(VISIBLE);
+                Log.e("jyt-Camera", "====" + s);
             }
         });
 
@@ -68,7 +86,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         isOk = true;
         // new Thread(this).start();
         Log.e("jyt", "surfaceCreated");
-        mCamera = Camera.open();
+        mCamera = Camera.open(0);
         // Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
 //        setLayoutParams(new FrameLayout.LayoutParams(
 //                previewSize.width, previewSize.height, Gravity.CENTER));
