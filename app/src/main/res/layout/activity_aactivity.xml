@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".servicem.activity.AActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/tv"
+        android:text="123"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/tv2"
+        android:text="xxx"></TextView>
+
+</LinearLayout>

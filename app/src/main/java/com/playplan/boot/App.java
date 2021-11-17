@@ -14,6 +14,7 @@ import com.playplan.fastmodules.module.ModuleLoader;
  * desc   :
  */
 public class App extends Application implements IFastModule {
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -23,6 +24,11 @@ public class App extends Application implements IFastModule {
 
     @Override
     public void intitFastNodeList() {
-        Log.e("jyt", "test === initFastNodeList");
+        synchronized (this) {
+            Log.e("jyt", "test === initFastNodeList");
+        }
+
     }
+
+
 }

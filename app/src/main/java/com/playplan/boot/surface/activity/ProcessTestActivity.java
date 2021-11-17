@@ -1,4 +1,4 @@
-package com.playplan.boot.activity;
+package com.playplan.boot.surface.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;

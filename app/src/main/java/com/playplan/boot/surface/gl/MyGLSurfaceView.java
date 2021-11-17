@@ -12,6 +12,7 @@ import android.util.AttributeSet;
  */
 public class MyGLSurfaceView extends GLSurfaceView {
 
+
     private MyRender mMyRenderer;
 
     public MyGLSurfaceView(Context context) {

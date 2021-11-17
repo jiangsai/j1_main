@@ -1,4 +1,4 @@
-package com.playplan.boot.activity;
+package com.playplan.boot.surface.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -127,4 +127,11 @@ public class SurfaceActivity extends AppCompatActivity {
         });
 
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
 }

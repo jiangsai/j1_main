@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".surface.activity.MyDialogActivity">
+    tools:context=".surface.activity.OkhttpActivity">
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/tv"></TextView>
+        android:text="@string/app_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
